@@ -1,0 +1,74 @@
+1: In the Stand What was the nickname of the virus that caused the collapse of society
+		Helix Icons for the answer selections
+	A. Captain Tripps
+	B. Big Bug
+	C. Super Flue
+	D. Dead Disease 
+
+		Correct Answer A.
+			Bad Screen : You May be infected! 
+				Icon of the biochecm
+					Next Button
+			Special Screen : You arent sick! Make your way to Denver with the rest.
+				Icon of Mountains
+					Next Button
+
+2. In what fictional Maine town does IT take place?
+		Baloon Icon for answer selesctions
+	A. Castle Rock
+	B. Derry
+	C. Hardlow
+	D. Claiborne
+
+		Correct Answer B
+			Bad Screen : We all float down here! And now so do you!
+				Next Button
+				Clown Icon
+			Special Screen: You've faced your fears! Great work
+				Turtle Icon
+
+3. What activiy where the group of friends doing at the start of Dreamcather?
+		Cabin Icon
+	A. Hunting	
+	B. Hiking
+	C. Playing Poker 
+	D. Demon
+		Correct Answer C
+			Bad Screen : What's that orange fuzzy stuff growing on your hand?
+				Next Button
+				Alien Icon	
+			Special Screen: You Evaded Kurtz! Keep going!
+				Next Button
+
+
+4. Who was Rolands Foe in The Gunslinger?
+		Revolver Icon
+	A. The Crimson Queen
+	B. Henery Bowers
+	C. The Man In Black
+	D. Annie Wilks
+
+		Correct Answer C
+			Bad Screen : You are lost in the Desert!
+				Cactus Icon
+			Good Screen : You remembered the face of your father and the name of your enemy!
+				Cowboy hat Icon	
+
+5. What was the name of the hotel in The Shining?
+		Type Writier 
+	A. Hilton Inn
+	B. Underlook Motel	
+	C. Mountain View 
+	D. The Overlook
+	
+		Correct Answer D
+			 Bad Screen : You're now on the guest list. Permenetly 
+				Fire Axe Icon
+			 Good Screen : You're defeinitely not a dull boy(or girl)! You survived the Hotel!
+				Bell Hop Icon
+				
+
+
+
+
+

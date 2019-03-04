@@ -1,0 +1,91 @@
+@import "https://fonts.googleapis.com/css?family=Dosis|Roboto:300,400";
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.title1 {
+  padding-top: 50px;
+}
+
+#quizTitle {
+  background: url(media/BookCovers2.JPG) repeat center center;
+  background-position: 40% 70%;
+  color: rgb(0, 0, 0);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  position: relative;
+}
+
+#quizTitle h2 {
+  font-size: 6rem;
+  font-weight: 800;
+  font-family: "Dosis";
+  text-align: center;
+}
+
+.title1,
+.title2 {
+  font-family: itc-benguiat, serif;
+  font-size: 10rem;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px #ff282850;
+}
+
+.quizTitle,
+.title1,
+.title2 {
+  text-align: center;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid rgb(7, 0, 0);
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.arrow-down:hover,
+.arrow-down:focus {
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid rgb(144, 144, 144);
+}
+
+.quizWrapper {
+  margin-top: 20px; /* make this one line */
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 500px;
+  /* display: none; */
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+.quizControls {
+  padding-right: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+form {
+  font-family: "Roboto", sans-serif;
+}
+
+.questionRightScreen,
+.questionWrongScreen,
+.finishLine {
+  padding: 50px;
+  font-family: "Roboto", sans-serif;
+}
