@@ -6,6 +6,10 @@
   padding: 0px;
 }
 
+#container {
+  height: 1800px;
+}
+
 .title1 {
   padding-top: 50px;
 }
@@ -58,6 +62,8 @@
   border-top: 30px solid rgb(144, 144, 144);
 }
 
+/* End of Title Styling  */
+
 .quizWrapper {
   margin-top: 20px; /* make this one line */
   margin-left: auto;
@@ -65,7 +71,8 @@
   padding-top: 20px;
   padding-bottom: 20px;
   max-width: 500px;
-  /* display: none; */
+  height: auto;
+  display: none;
   text-align: center;
   border-radius: 15px;
   box-shadow: 3px 3px 5px 6px #ccc;
@@ -79,13 +86,78 @@
   justify-content: flex-end;
 }
 
+.currentScore {
+  display: block;
+  padding-bottom: 20px;
+}
+
+.question {
+  display: block;
+  margin-top: 50px;
+}
+/* styling the radio buttons and lables  */
+.answerChoice {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  margin-left: 5px;
+  background-color: #f1f1f1;
+  color: #666;
+  top: 10px;
+  height: 30px;
+  width: 30px;
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-right: 7px;
+  outline: none;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.answerChoice:checked::before {
+  position: absolute;
+  font: 15px/1 "Open Sans", sans-serif;
+  left: 11px;
+  top: 7px;
+  content: "\02143";
+  transform: rotate(40deg);
+}
+
+.answerChoice:hover {
+  background-color: #f7f7f7;
+}
+
+.answerChoice:checked {
+  background-color: #f1f1f1f1;
+}
+/* End of styling radio buttons */
+
+.answerBox {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 10px 10px 10px 0;
+  border: none;
+}
+
 form {
   font-family: "Roboto", sans-serif;
 }
-
+/* minor styling for response screens */
 .questionRightScreen,
 .questionWrongScreen,
 .finishLine {
   padding: 50px;
   font-family: "Roboto", sans-serif;
+}
+
+/* auto styling the images */
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto\9;
+  box-shadow: 3px 3px 5px 6px #ccc;
 }
