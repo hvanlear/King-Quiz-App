@@ -41,6 +41,7 @@ function displayQuestion() {
   <button class="closeQuiz">Close</button>
 </div>
 <span class = "currentScore">${currentScore} / 5 Points</span>
+<div class="qustionCounter">Question # ${questionNumber + 1}</div>
 <img src = "${STORE[questionNumber].questionIcon}" style="max-width:250px" />
   <h2 class = "question">${STORE[questionNumber].question}</h2>
   <fieldset class = "answerBox">
@@ -72,7 +73,7 @@ function displayQuestion() {
   
   </form>
   <button onclick="userSubmit()">Submit</button>
-  <div class="qustionCounter">Question # ${questionNumber + 1}</div>
+ 
   `;
 }
 
