@@ -38,10 +38,14 @@ let currentScore = 0;
 function displayQuestion() {
   return `<form>
   <div class="quizControls">
-  <button class="closeQuiz">Close</button>
+  <button class="closeQuiz"><i class="material-icons">
+  clear
+  </i></button>
+
+  <div class="questionCounter">Question # ${questionNumber + 1}</div>
+  <span class = "currentScore">${currentScore} / 5 Points</span>
 </div>
-<span class = "currentScore">${currentScore} / 5 Points</span>
-<div class="qustionCounter">Question # ${questionNumber + 1}</div>
+
 <img src = "${STORE[questionNumber].questionIcon}" style="max-width:250px" />
   <h2 class = "question">${STORE[questionNumber].question}</h2>
   <fieldset class = "answerBox">
@@ -77,10 +81,14 @@ function displayQuestion() {
   `;
 }
 
+//animating the drop down quiz
 $(function() {
   $(".arrow-down").click(function() {
-    $(".quizWrapper").toggle();
-    renderQuestion();
+    let position = $("#quizTitle").offset().top;
+    $("body, html").animate({
+      scrollTop: position
+    });
+    $(".quizWrapper").slideDown("medium");
   });
 });
 
@@ -115,9 +123,11 @@ function renderQuizEnd() {
 function correctAnswerScreen() {
   return `
   <div class="quizControls">
-  <button class="closeQuiz">Close</button>
+  <button class="closeQuiz"><i class="material-icons">
+  clear
+  </i></button>
+  <span class = "currentScore"> ${currentScore}/ 5 Points</span>
   </div>
-  <span class = "currentScore">Your current score is ${currentScore} out of 5 points</span>
   <img src = "${
     STORE[questionNumber].correctAnswerIcon
   }" style="width:200px;height:200px;" />
@@ -129,9 +139,11 @@ function correctAnswerScreen() {
 function wrongAnswerScreen() {
   return ` 
   <div class="quizControls">
-  <button class="closeQuiz">Close</button>
+  <button class="closeQuiz"><i class="material-icons">
+  clear
+  </i></button>
+  <span class = "currentScore"> ${currentScore}/ 5 Points</span>
   </div>
-  <span class = "currentScore">Your current score is ${currentScore} out of 5 points</span>
   <img src = "${
     STORE[questionNumber].wrongAnswerIcon
   }" style="width:200px;height:200px;" />

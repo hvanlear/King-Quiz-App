@@ -8,6 +8,9 @@
 
 #container {
   height: 1800px;
+  background-image: url(media/FinalCutFlipped.png);
+  background-repeat: repeat-y;
+  background-color: #eeeeee;
 }
 
 .title1 {
@@ -15,12 +18,13 @@
 }
 
 #quizTitle {
-  background: url(media/BookCovers2.JPG) repeat center center;
-  background-position: 40% 70%;
+  /* background: url(media/BookCovers2.JPG) repeat center center;
+  background-position: 40% 70%; */
   color: rgb(0, 0, 0);
-  -webkit-text-fill-color: transparent;
+  /* -webkit-text-fill-color: transparent; */
   -webkit-background-clip: text;
   position: relative;
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px #ff2828c2;
 }
 
 #quizTitle h2 {
@@ -65,37 +69,51 @@
 /* End of Title Styling  */
 
 .quizWrapper {
+  background-color: white;
   margin-top: 20px; /* make this one line */
   margin-left: auto;
   margin-right: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  max-width: 500px;
+  max-width: 654px;
   height: auto;
   display: none;
   text-align: center;
-  border-radius: 15px;
+  /* border-top: 8px solid #690000;
+  border-bottom: 8px solid #690000; */
+  /* padding: 2rem; */
   box-shadow: 3px 3px 5px 6px #ccc;
+  font-family: "Roboto", sans-serif;
 }
 
 .quizControls {
   padding-right: 10px;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
+  background-color: #690000;
+}
+
+.questionCounter {
+  font-family: "Roboto", sans-serif;
+  padding-top: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: white;
+  margin-left: 0.5rem;
 }
 
 .currentScore {
   display: block;
   padding-bottom: 20px;
+  padding-top: 20px;
+  color: white;
 }
 
 .question {
   display: block;
   margin-top: 50px;
 }
-/* styling the radio buttons and lables  */
+/* styling the  buttons and button lables  */
 .answerChoice {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -133,7 +151,7 @@
 .answerChoice:checked {
   background-color: #f1f1f1f1;
 }
-/* End of styling radio buttons */
+/* End of styling  buttons */
 
 .answerBox {
   display: flex;
@@ -141,7 +159,24 @@
   text-align: left;
   padding: 10px 10px 10px 0;
   border: none;
+  margin: 0.5rem;
 }
+
+/* button styling */
+
+.material-icons {
+  color: white;
+}
+
+button {
+  border: none;
+  background: none;
+  padding: none;
+  margin: none;
+  cursor: pointer;
+}
+
+/* end button styling */
 
 form {
   font-family: "Roboto", sans-serif;
@@ -156,8 +191,8 @@ form {
 
 /* auto styling the images */
 img {
-  max-width: 100%;
-  height: auto;
-  width: auto\9;
+  width: auto;
+  height: 230px;
   box-shadow: 3px 3px 5px 6px #ccc;
+  margin-top: 30px;
 }
