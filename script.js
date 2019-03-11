@@ -33,7 +33,6 @@
 
 let questionNumber = 0;
 let currentScore = 0;
-// let correctAnswer = `${STORE[questionNumber].correctAnswer}`; Why cant i declare this here
 
 function displayQuestion() {
   return `<form>
@@ -76,7 +75,7 @@ function displayQuestion() {
   </fieldset>
   
   </form>
-  <button onclick="userSubmit()">Submit</button>
+  <button id="submitButton" onclick="userSubmit()">SUBMIT</button>
  
   `;
 }
@@ -96,6 +95,7 @@ function renderQuestion() {
   $(".quizWrapper").html(displayQuestion());
 }
 
+// Determining if the question submitted is correct or wrong and then displaying the appropirate page
 function userSubmit() {
   console.log(questionNumber);
   let choice = $("input:checked");
@@ -126,12 +126,15 @@ function correctAnswerScreen() {
   <button class="closeQuiz"><i class="material-icons">
   clear
   </i></button>
-  <span class = "currentScore"> ${currentScore}/ 5 Points</span>
+  <div class="questionCounter">CORRECT!</div>
+  <span class = "currentScore"> ${currentScore} / 5 Points</span>
   </div>
   <img src = "${
     STORE[questionNumber].correctAnswerIcon
-  }" style="width:200px;height:200px;" />
-  <h2>${STORE[questionNumber].correctAnswerMessage}</h2>
+  }" style="max-width:500px" />
+  <h2 class = "questionMessage">${
+    STORE[questionNumber].correctAnswerMessage
+  }</h2>
   ${checkForQuizEnd()}
   `;
 }
@@ -142,38 +145,35 @@ function wrongAnswerScreen() {
   <button class="closeQuiz"><i class="material-icons">
   clear
   </i></button>
-  <span class = "currentScore"> ${currentScore}/ 5 Points</span>
+  <div class="questionCounter">WRONG!</div>
+  <span class = "currentScore"> ${currentScore} / 5 Points</span>
   </div>
   <img src = "${
     STORE[questionNumber].wrongAnswerIcon
-  }" style="width:200px;height:200px;" />
-  <h2>${STORE[questionNumber].wrongAnswerMessage}</h2>
+  }" style="max-width:500px" />
+  <h2 class = "questionMessage">${STORE[questionNumber].wrongAnswerMessage}</h2>
   ${checkForQuizEnd()}
   `;
 }
 
 function quizEndScreen() {
   return `
-  <img src="https://img.icons8.com/ios/50/000000/stephen-king.png" />
-  <h1>
-    "Talent is cheaper than table salt. What separates the talented
-    individual from the successful one is a lot of hard work." -SK
-  </h1>
-  <h2> Your Score was ${currentScore} out of 5 Points
-  <h2>
-    Nice Work! Dont worry about the score, this was just for fun. Thanks for
-    playing my game!
-  </h2>
-
-  <button onclick = "restartQuiz()">Restart Quiz</button>
+  <div class="quizControls">
+  <span class = "finalScore"> FINAL SCORE : ${currentScore} / 5 Points</span>
+  </div>
+  <img id="portrait" src="media/jorge-ortiz-2stephen.jpg">
+ <blockquote class = "king">Talent is cheaper than table salt. What separates the talented
+ individual from the successful one is a lot of hard work.
+ </blockquote>
+  <button id="transitionButton" onclick = "restartQuiz()">Restart Quiz</button>
   `;
 }
 
 //Check for the final question in the quiz
 function checkForQuizEnd() {
-  let button = `<button onclick= "nextQuestion()">Next Question</button>`;
+  let button = `<button id="transitionButton" onclick= "nextQuestion()">NEXT</button>`;
   if (questionNumber == 4) {
-    button = `<button onclick= "renderQuizEnd()">Finish</button>`;
+    button = `<button id="transitionButton" onclick= "renderQuizEnd()">FINISH</button>`;
   }
   return `${button}`;
 }

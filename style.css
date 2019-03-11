@@ -3,7 +3,7 @@
 * {
   box-sizing: border-box;
   margin: 0px;
-  padding: 0px;
+  /* padding: 0px; */
 }
 
 #container {
@@ -11,6 +11,7 @@
   background-image: url(media/FinalCutFlipped.png);
   background-repeat: repeat-y;
   background-color: #eeeeee;
+  min-width: 320px;
 }
 
 .title1 {
@@ -63,7 +64,7 @@
 .arrow-down:focus {
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
-  border-top: 30px solid rgb(144, 144, 144);
+  border-top: 30px solid #690000;
 }
 
 /* End of Title Styling  */
@@ -77,10 +78,7 @@
   height: auto;
   display: none;
   text-align: center;
-  /* border-top: 8px solid #690000;
-  border-bottom: 8px solid #690000; */
-  /* padding: 2rem; */
-  box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.5);
   font-family: "Roboto", sans-serif;
 }
 
@@ -94,26 +92,47 @@
 }
 
 .questionCounter {
-  font-family: "Roboto", sans-serif;
-  padding-top: 20px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: white;
-  margin-left: 0.5rem;
+  margin-left: 5rem;
 }
 
-.currentScore {
-  display: block;
-  padding-bottom: 20px;
-  padding-top: 20px;
+.questionCounter,
+.currentScore,
+.finalScore {
+  font-family: "Roboto", sans-serif;
+  padding: 15px 0;
+  font-weight: 600;
   color: white;
+  font-size: 20px;
+  letter-spacing: 0.1rem;
+}
+
+.questionMessage {
+  padding: 2rem;
 }
 
 .question {
   display: block;
-  margin-top: 50px;
+  margin-top: 30px;
+  padding: 0.5rem;
+  letter-spacing: 0.03rem;
+  line-height: 1.6;
 }
-/* styling the  buttons and button lables  */
+/* Answer Selection Styling  */
+
+label {
+  font-size: 20px;
+  letter-spacing: 0.03rem;
+}
+
+.answerBox {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 10px 10px 10px 0;
+  border: none;
+  margin: 0.5rem;
+}
+
 .answerChoice {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -122,7 +141,7 @@
   position: relative;
   margin-left: 5px;
   background-color: #f1f1f1;
-  color: #666;
+  color: rgb(255, 255, 255);
   top: 10px;
   height: 30px;
   width: 30px;
@@ -131,8 +150,6 @@
   cursor: pointer;
   margin-right: 7px;
   outline: none;
-  padding-bottom: 10px;
-  padding-top: 10px;
 }
 
 .answerChoice:checked::before {
@@ -145,24 +162,37 @@
 }
 
 .answerChoice:hover {
-  background-color: #f7f7f7;
+  background-color: #d46653;
 }
 
 .answerChoice:checked {
-  background-color: #f1f1f1f1;
+  background-color: #9e372a;
 }
-/* End of styling  buttons */
+/* End Answer Styling */
 
-.answerBox {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  padding: 10px 10px 10px 0;
-  border: none;
-  margin: 0.5rem;
+/* Nav button styling */
+
+#submitButton,
+#transitionButton {
+  font-size: 20px;
+  letter-spacing: 0.1rem;
+  border-radius: 5px;
+  margin: 1rem;
+  background-color: #9d372a;
+  color: white;
+  padding: 0.5rem;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
 }
 
-/* button styling */
+#submitButton:hover {
+  background-color: #d46653;
+}
+#transitionButton:hover {
+  background-color: #d46653;
+}
 
 .material-icons {
   color: white;
@@ -176,11 +206,12 @@ button {
   cursor: pointer;
 }
 
-/* end button styling */
+/* end nav button styling */
 
 form {
   font-family: "Roboto", sans-serif;
 }
+
 /* minor styling for response screens */
 .questionRightScreen,
 .questionWrongScreen,
@@ -193,6 +224,70 @@ form {
 img {
   width: auto;
   height: 230px;
-  box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.5);
   margin-top: 30px;
 }
+
+/* Final Page Styling */
+
+.finalScore {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#portrait {
+  box-shadow: none;
+  max-width: 500px;
+  height: 400px;
+  margin-top: 10px;
+}
+
+blockquote {
+  font-size: 1.4em;
+  width: 90%;
+  margin: 30px auto;
+  font-family: Open Sans;
+  font-style: italic;
+  color: #555555;
+  padding: 1.2em 30px 1.2em 75px;
+  border-left: 8px solid #9d372a;
+  line-height: 1.6;
+  position: relative;
+  background: #ededed;
+}
+
+blockquote::before {
+  font-family: itc-benguiat, serif;
+  content: "\201C";
+  color: #9d372a;
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+
+blockquote::after {
+  content: "";
+}
+
+/* media Querys */
+/* @media only screen and (max-width: 768px) {
+  #quizTitle h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: "Dosis";
+    text-align: center;
+  }
+
+  .title1,
+  .title2 {
+    font-family: itc-benguiat, serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #000, 3px 3px 5px #ff282850;
+  }
+
+  .quizWrapper {
+    width: 300px;
+  }
+} */

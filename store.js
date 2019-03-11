@@ -1,15 +1,15 @@
 const STORE = [
   {
     question:
-      "In the Stand What was the nickname of the virus that caused the collapse of society",
+      "In The Stand what was the nickname of the virus that caused the collapse of society?",
     questionIcon: "media/TheStandCover.jpg",
-    answers: ["Captain Tripps", "Big Bug", "Super Flue", "Runny Rigs"],
+    answers: ["Captain Tripps", "Big Bug", "Super Flue", "The Pulse"],
     correctAnswer: "Captain Tripps",
-    correctAnswerIcon: "media/Icons/mountainsIcon.png",
+    correctAnswerIcon: "media/Icons/thestandCorrect.jpg",
     correctAnswerMessage:
       "You arent sick! Make your way to Denver with the other surviors",
     wrongAnswerMessage: "You May be infected!",
-    wrongAnswerIcon: "media/Icons/bioIcon.png"
+    wrongAnswerIcon: "media/Icons/thestandWrong.jpg"
   },
   {
     question: "In what fictional Maine town does IT take place?",
@@ -17,23 +17,23 @@ const STORE = [
     answers: ["Castle Rock", "Derry", "Hardlow", "Claiborne"],
     correctAnswer: "Derry",
     correctAnswerMessage: "You've faced your fears! Great work",
-    correctAnswerIcon: "media/Icons/turtleicon.png",
+    correctAnswerIcon: "media/Icons/itCorrect.png",
     wrongAnswerMessage: "We all float down here! And now so do you!",
-    wrongAnswerIcon: "media/Icons/balloonIcon.png"
+    wrongAnswerIcon: "media/Icons/itWrong.jpg"
   },
   {
     question:
-      "What activiy where the group of friends doing at the start of Dreamcather?",
+      "What activiy were the group of friends doing at the start of Dreamcather?",
     questionIcon: "media/DreamcatcherCover.jpg",
     answers: ["Hunting", "Hiking", "Playing Poker", "A Seance"],
     correctAnswer: "Hunting",
     correctAnswerMessage: "You Evaded Kurtz! Keep going!",
-    correctAnswerIcon: "media/Icons/dreamCatcherIcon.png",
+    correctAnswerIcon: "media/Icons/dreamcatcherCorrect.jpg",
     wrongAnswerMessage: "What's that orange fuzzy stuff growing on your hand?",
-    wrongAnswerIcon: "media/Icons/alienIcon.png"
+    wrongAnswerIcon: "media/Icons/dfreamcatcherWrong.jpg"
   },
   {
-    question: "Who was Rolands Foe in The Gunslinger?",
+    question: "Who was Roland's foe in The Gunslinger?",
     questionIcon: "media/GunslingerCover.jpg",
     answers: [
       "The Crimson Queen",
@@ -44,9 +44,9 @@ const STORE = [
     correctAnswer: "The Man In Black",
     correctAnswerMessage:
       "You remembered the face of your father and the name of your enemy!",
-    correctAnswerIcon: "media/Icons/revolver.png",
+    correctAnswerIcon: "media/Icons/gunslingerCorrect.jpg",
     wrongAnswerMessage: "You are lost in the Desert!",
-    wrongAnswerIcon: "media/Icons/deserIcon.png"
+    wrongAnswerIcon: "media/Icons/gunslingerWrong.jpg"
   },
   {
     question: "What was the name of the hotel in The Shining?",
@@ -60,8 +60,8 @@ const STORE = [
     correctAnswer: "The Overlook",
     correctAnswerMessage:
       "You're defeinitely not a dull boy(or girl)! You survived the Hotel!",
-    correctAnswerIcon: "media/Icons/typewriterIcon.png",
+    correctAnswerIcon: "media/Icons/theshiningCorrect.jpg",
     wrongAnswerMessage: "You're now in the guestlist. Permanently",
-    wrongAnswerIcon: "media/Icons/croquetIcon.png"
+    wrongAnswerIcon: "media/Icons/theshiningWrong.jpg"
   }
 ];
