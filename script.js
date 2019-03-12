@@ -37,7 +37,7 @@ let currentScore = 0;
 function displayQuestion() {
   return `<form>
   <div class="quizControls">
-  <button class="closeQuiz"><i class="material-icons">
+  <button class="closeQuiz" onclick="closeQuiz()"><i class="material-icons">
   clear
   </i></button>
 
@@ -91,6 +91,17 @@ $(function() {
   });
 });
 
+function closeQuiz() {
+  questionNumber = 0;
+  currentScore = 0;
+  let position = $(".title1").offset().top;
+  $("body, html").animate({
+    scrollTop: position
+  });
+  $(".quizWrapper").slideUp("medium");
+  renderQuestion();
+}
+
 function renderQuestion() {
   $(".quizWrapper").html(displayQuestion());
 }
@@ -123,7 +134,7 @@ function renderQuizEnd() {
 function correctAnswerScreen() {
   return `
   <div class="quizControls">
-  <button class="closeQuiz"><i class="material-icons">
+  <button class="closeQuiz" onclick="closeQuiz()"><i class="material-icons">
   clear
   </i></button>
   <div class="questionCounter">CORRECT!</div>
@@ -142,7 +153,7 @@ function correctAnswerScreen() {
 function wrongAnswerScreen() {
   return ` 
   <div class="quizControls">
-  <button class="closeQuiz"><i class="material-icons">
+  <button class="closeQuiz" onclick="closeQuiz()"><i class="material-icons">
   clear
   </i></button>
   <div class="questionCounter">WRONG!</div>
@@ -195,6 +206,7 @@ function nextQuestion() {
 
 function startQuiz() {
   renderQuestion();
+  closeQuiz();
 }
 
 $(startQuiz);

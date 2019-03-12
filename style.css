@@ -271,23 +271,41 @@ blockquote::after {
 }
 
 /* media Querys */
-/* @media only screen and (max-width: 768px) {
-  #quizTitle h2 {
-    font-size: 3rem;
-    font-weight: 800;
-    font-family: "Dosis";
-    text-align: center;
+@media only screen and (max-width: 768px) {
+  #container {
+    height: 1800px;
+    /* background-image: url(media/FinalCutFlipped.png); */
+    background-image: none;
+    background-color: #eeeeee;
+    min-width: 320px;
+  }
+
+  .quizWrapper {
+    background-image: url(media/FinalCutFlipped.png);
+    background-size: 300px 200px;
+    background-repeat: repeat-y;
   }
 
   .title1,
   .title2 {
-    font-family: itc-benguiat, serif;
-    font-size: 5rem;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 1px #000, 3px 3px 5px #ff282850;
+    font-size: 6rem;
   }
 
-  .quizWrapper {
-    width: 300px;
+  #quizTitle h2 {
+    font-size: 4rem;
   }
-} */
+  .answerChoice {
+    background-color: #b9b9b9;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .title1,
+  .title2 {
+    font-size: 4rem;
+  }
+
+  #quizTitle h2 {
+    font-size: 2rem;
+  }
+}
