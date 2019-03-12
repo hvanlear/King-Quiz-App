@@ -33,7 +33,7 @@
 
 let questionNumber = 0;
 let currentScore = 0;
-
+console.log(STORE.length);
 function displayQuestion() {
   return `<form>
   <div class="quizControls">
@@ -53,6 +53,7 @@ function displayQuestion() {
     STORE[questionNumber].answers[0]
   }"/>
   <label for="question1">${STORE[questionNumber].answers[0]}</label>
+  
   </div>
   <div>
   <input id="question2" class = "answerChoice" type ="radio" name ="radAnswer" value ="${
@@ -183,7 +184,7 @@ function quizEndScreen() {
 //Check for the final question in the quiz
 function checkForQuizEnd() {
   let button = `<button id="transitionButton" onclick= "nextQuestion()">NEXT</button>`;
-  if (questionNumber == 4) {
+  if (questionNumber == STORE.length - 1) {
     button = `<button id="transitionButton" onclick= "renderQuizEnd()">FINISH</button>`;
   }
   return `${button}`;

@@ -1,3 +1,5 @@
+// This animation is not used but was explored
+
 $(document).ready(function() {
   var mouseX, mouseY;
   var traX, traY;
