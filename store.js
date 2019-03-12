@@ -2,7 +2,7 @@ const STORE = [
   {
     question:
       "In The Stand what was the nickname of the virus that caused the collapse of society?",
-    questionIcon: "media/TheStandCover.jpg",
+    questionIcon: "media/theStandCover.jpg",
     answers: ["Captain Tripps", "Big Bug", "Super Flue", "The Pulse"],
     correctAnswer: "Captain Tripps",
     correctAnswerIcon: "media/Icons/thestandCorrect.jpg",
