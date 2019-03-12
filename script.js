@@ -82,8 +82,6 @@ function userSubmit() {
   if (choice.val() == `${STORE[questionNumber].correctAnswer}`) {
     currentScore += 1;
     renderCorrectAnswerScreen();
-  } else if ($("input:checked", "false")) {
-    console.log("test");
   } else {
     renderWrongAsnwerScreen();
   }
