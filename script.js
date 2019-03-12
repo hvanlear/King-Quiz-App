@@ -26,13 +26,13 @@ function displayQuestion() {
   <div>
   <input id="question2" class = "answerChoice" type ="radio" name ="radAnswer" value ="${
     STORE[questionNumber].answers[1]
-  }"/>
+  }" required>
   <label for="question2">${STORE[questionNumber].answers[1]}</label>
   </div>
   <div>
   <input id="question3" class = "answerChoice" type ="radio" name ="radAnswer" value ="${
     STORE[questionNumber].answers[2]
-  }"/>
+  }" required>
   <label for="question3">${STORE[questionNumber].answers[2]}</label>
   </div>
   <div>
@@ -152,7 +152,7 @@ function quizEndScreen() {
 //Check for the final question in the quiz
 function checkForQuizEnd() {
   let button = `<button id="transitionButton" onclick= "nextQuestion()">NEXT</button>`;
-  if (questionNumber == STORE.length) {
+  if (questionNumber == STORE.length - 1) {
     button = `<button id="transitionButton" onclick= "renderQuizEnd()">FINISH</button>`;
   }
   return `${button}`;
