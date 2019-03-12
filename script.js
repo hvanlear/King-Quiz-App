@@ -1,36 +1,5 @@
-//+++++++++++++++++++ When the User clicks the start button ++++++++++++++++++++++++++
-
-// 1. listen for when the user clicks on the start button
-// 2. Move the page downward centering the form element
-// 3. Generate the first question pulling the information from the STORE
-// create a function that renders the questions
-//+++++ Form Template +++++
-// 4. Render the first question on the DOM
-// 5. Generate the Submit button on the form
-// 6. Generate the exit button on the form
-// 7. Generate the current score of the game 0/5
-// 8. Current Question number
-// 9. Restart quiz button
-
-//+++++++++++++++++++ When the User Clicks the Submit button ++++++++++++++++++++++++++
-
-// 1.  Listn for the click submission
-// 2. Create a function that compare the seleected answer against the correct updates the score variable
-// 3. show the updated score on the DOM
-// 4. generate one of the two specific reaction pages based on question answer
-// 5. Generate the Next Button
-
-//+++++++++++++++++++ When the user clicks the Next Button on result screen ++++++++++++++++++++++++++
-
-//1. Listen for click event on the next button
-//2. close the response page
-//2. Render the next question in the store to the page
-
-//+++++++++++++++++++ When the user clicks the New Quiz (restart) Button  ++++++++++++++++++++++++++
-
 //1. Current question is cleared
 //2. Quiz is reset to the st
-
 let questionNumber = 0;
 let currentScore = 0;
 console.log(STORE.length);
@@ -40,7 +9,6 @@ function displayQuestion() {
   <button class="closeQuiz" onclick="closeQuiz()"><i class="material-icons">
   clear
   </i></button>
-
   <div class="questionCounter">Question # ${questionNumber + 1}</div>
   <span class = "currentScore">${currentScore} / 5 Points</span>
 </div>
@@ -70,7 +38,7 @@ function displayQuestion() {
   <div>
   <input id="question4" class = "answerChoice" type ="radio" name ="radAnswer" value="${
     STORE[questionNumber].answers[3]
-  }"/>
+  }" required>
   <label for="question4">${STORE[questionNumber].answers[3]}</label>
   </div>
   </fieldset>
@@ -114,6 +82,8 @@ function userSubmit() {
   if (choice.val() == `${STORE[questionNumber].correctAnswer}`) {
     currentScore += 1;
     renderCorrectAnswerScreen();
+  } else if ($("input:checked", "false")) {
+    console.log("test");
   } else {
     renderWrongAsnwerScreen();
   }
@@ -184,7 +154,7 @@ function quizEndScreen() {
 //Check for the final question in the quiz
 function checkForQuizEnd() {
   let button = `<button id="transitionButton" onclick= "nextQuestion()">NEXT</button>`;
-  if (questionNumber == STORE.length - 1) {
+  if (questionNumber == STORE.length) {
     button = `<button id="transitionButton" onclick= "renderQuizEnd()">FINISH</button>`;
   }
   return `${button}`;

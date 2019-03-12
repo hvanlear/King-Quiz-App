@@ -24,13 +24,13 @@ const STORE = [
   {
     question:
       "What activiy were the group of friends doing at the start of Dreamcather?",
-    questionIcon: "media/DreamcatcherCover.jpg",
+    questionIcon: "media/dreamcatcherCover.jpg",
     answers: ["Hunting", "Hiking", "Playing Poker", "A Seance"],
     correctAnswer: "Hunting",
     correctAnswerMessage: "You Evaded Kurtz! Keep going!",
     correctAnswerIcon: "media/Icons/dreamcatcherCorrect.jpg",
     wrongAnswerMessage: "What's that orange fuzzy stuff growing on your hand?",
-    wrongAnswerIcon: "media/Icons/dfreamcatcherWrong.jpg"
+    wrongAnswerIcon: "media/Icons/dreamcatcherWrong.jpg"
   },
   {
     question: "Who was Roland's foe in The Gunslinger?",
