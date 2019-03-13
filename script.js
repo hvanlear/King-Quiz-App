@@ -4,7 +4,7 @@ let questionNumber = 0;
 let currentScore = 0;
 function displayQuestion() {
   return `<form class='quizForm'>
-  <div class="quizControls">
+<div class="quizControls">
   <button class="closeQuiz" onclick="closeQuiz()"><i class="material-icons">
   clear
   </i></button>
@@ -20,7 +20,6 @@ function displayQuestion() {
     STORE[questionNumber].answers[0]
   }"/>
   <label for="question1">${STORE[questionNumber].answers[0]}</label>
-  
   </div>
   <div>
   <input id="question2" class = "answerChoice" type ="radio" name ="radAnswer" value ="${

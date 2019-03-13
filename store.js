@@ -7,8 +7,8 @@ const STORE = [
     correctAnswer: "Captain Tripps",
     correctAnswerIcon: "media/Icons/thestandCorrect.jpg",
     correctAnswerMessage:
-      "You arent sick! Make your way to Denver with the other surviors",
-    wrongAnswerMessage: "You May be infected!",
+      "You aren't sick! Make your way to Denver with the other survivors.",
+    wrongAnswerMessage: "You may be infected!",
     wrongAnswerIcon: "media/Icons/thestandWrong.jpg"
   },
   {
@@ -23,7 +23,7 @@ const STORE = [
   },
   {
     question:
-      "What activiy were the group of friends doing at the start of Dreamcather?",
+      "What activity were the group of friends doing at the start of Dreamcather?",
     questionIcon: "media/dreamcatcherCover.jpg",
     answers: ["Hunting", "Hiking", "Playing Poker", "A Seance"],
     correctAnswer: "Hunting",
@@ -59,7 +59,7 @@ const STORE = [
     ],
     correctAnswer: "The Overlook",
     correctAnswerMessage:
-      "You're defeinitely not a dull boy(or girl)! You survived the Hotel!",
+      "You're definitely not a dull boy(or girl)! You survived the Hotel!",
     correctAnswerIcon: "media/Icons/theshiningCorrect.jpg",
     wrongAnswerMessage: "You're now in the guestlist. Permanently",
     wrongAnswerIcon: "media/Icons/theshiningWrong.jpg"
