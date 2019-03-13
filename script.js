@@ -2,9 +2,8 @@
 //2. Quiz is reset to the st
 let questionNumber = 0;
 let currentScore = 0;
-console.log(STORE.length);
 function displayQuestion() {
-  return `<form>
+  return `<form class='quizForm'>
   <div class="quizControls">
   <button class="closeQuiz" onclick="closeQuiz()"><i class="material-icons">
   clear
@@ -42,9 +41,9 @@ function displayQuestion() {
   <label for="question4">${STORE[questionNumber].answers[3]}</label>
   </div>
   </fieldset>
-  
+  <button type="submit" id="submitButton" onclick="userSubmit()">SUBMIT</button>
   </form>
-  <button id="submitButton" onclick="userSubmit()">SUBMIT</button>
+ 
  
   `;
 }
@@ -67,22 +66,22 @@ function closeQuiz() {
   $("body, html").animate({
     scrollTop: position
   });
-  $(".quizWrapper").slideUp("medium");
-  renderQuestion();
+  $(".quizWrapper").slideUp("medium", function() {
+    renderQuestion();
+  });
 }
 
 function renderQuestion() {
   $(".quizWrapper").html(displayQuestion());
 }
 
-// Determining if the question submitted is correct or wrong and then displaying the appropirate page
+// Determining if the question submitted firs selected correct or wrong and then displaying the appropirate page
 function userSubmit() {
-  console.log(questionNumber);
   let choice = $("input:checked");
   if (choice.val() == `${STORE[questionNumber].correctAnswer}`) {
     currentScore += 1;
     renderCorrectAnswerScreen();
-  } else {
+  } else if (choice.length > 0) {
     renderWrongAsnwerScreen();
   }
 }
@@ -177,5 +176,10 @@ function startQuiz() {
   renderQuestion();
   closeQuiz();
 }
+
+$(".quizForm").submit(function(e) {
+  e.preventDefault();
+  return false;
+});
 
 $(startQuiz);
